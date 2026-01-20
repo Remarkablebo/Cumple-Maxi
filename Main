@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumpleaños de Maxi - Sonic</title>
+    <style>
+        /* Paleta de colores Sonic: Azul Eléctrico, Amarillo y Rojo */
+        :root {
+            --sonic-blue: #0056b3;
+            --sonic-yellow: #ffcc00;
+            --sonic-red: #cc0000;
+            --dark-bg: #050505;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor Principal Responsive */
+        .card {
+            width: 100%;
+            max-width: 480px;
+            background: linear-gradient(180deg, #001f3f 0%, #000 100%);
+            border: 3px solid var(--sonic-blue);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.4);
+            text-align: center;
+        }
+
+        /* Imagen de cabecera */
+        .header-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content {
+            padding: 25px 15px;
+        }
+
+        /* Título */
+        h1 {
+            color: var(--sonic-yellow);
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px var(--sonic-red);
+            letter-spacing: 1px;
+        }
+
+        /* Cajas de información */
+        .info-item {
+            background: rgba(255, 255, 255, 0.07);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 15px;
+            border-bottom: 3px solid var(--sonic-yellow);
+        }
+
+        .label {
+            color: var(--sonic-yellow);
+            font-weight: bold;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        /* Sección de Mapas y Formulario */
+        .embed-container {
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 20px;
+            border: 2px solid #333;
+        }
+
+        h2 {
+            color: var(--sonic-yellow);
+            font-size: 1.4rem;
+            margin-top: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .footer {
+            padding: 25px;
+            font-size: 0.9rem;
+            color: #777;
+            background: rgba(0,0,0,0.3);
+        }
+
+        /* Optimización para móviles pequeños */
+        @media (max-width: 360px) {
+            h1 { font-size: 1.6rem; }
+            .text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://static.wixstatic.com/media/f9cddd_fc1ae108cfa24a79a7d805f1db45ff70~mv2.png" alt="Sonic Invitation" class="header-img">
+
+    <div class="content">
+        <h1>Cumpleaños Maxi</h1>
+
+        <div class="info-item">
+            <span class="label">¿Cuándo?</span>
+            <div class="text">Domingo 8 de Febrero<br>14:30 PM</div>
+        </div>
+
+        <div class="info-item">
+            <span class="label">¿Dónde?</span>
+            <div class="text">
+                <strong>Salón de eventos Alcalá</strong><br>
+                Cidar Humerez entre Rafael Méndez y Alberta Acha
+            </div>
+        </div>
+
+        <div class="embed-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3807.639356343345!2d-66.19251109837636!3d-17.381078459032995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDIyJzUzLjgiUyA2NsKwMTEnMjUuNiJX!5e0!3m2!1ses!2sbo!4v1768930219624!5m2!1ses!2sbo" 
+                height="280" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <h2>¿Vienes a la carrera?</h2>
+        <p style="color: #ccc; font-size: 0.9rem;">Confirma tu asistencia aquí abajo:</p>
+
+        <div class="embed-container">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScM_s8dUYcqam30V7KM15L2nbsOY7wsZzM-AWphYtO6NK2YZA/viewform?embedded=true" 
+                height="800" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">Cargando formulario…
+            </iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        ¡Prepárate para la velocidad! 💨🦔
+    </div>
+</div>
+
+</body>
+</html>
