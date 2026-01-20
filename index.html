@@ -20,7 +20,6 @@
 
         /* --- ESTILOS GENERALES --- */
         body {
-            /* Aplicamos Montserrat como fuente base */
             font-family: 'Montserrat', sans-serif;
             background-color: var(--dark-bg);
             background-image: radial-gradient(circle at center, #111 0%, #000 100%);
@@ -58,24 +57,33 @@
             padding: 30px 20px;
         }
 
-        /* --- TÍTULO MONTSERRAT BLACK ITALIC --- */
+        /* --- TÍTULO PRINCIPAL CORREGIDO --- */
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 900;   /* Black */
-            font-style: italic; /* Italic */
-            font-size: 2.8rem;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 3rem; /* Un poco más grande para impacto */
             margin: 0 0 25px 0;
             text-transform: uppercase;
-            color: var(--sonic-yellow);
-            
-            /* Efecto Eléctrico en el texto */
-            -webkit-text-stroke: 2px var(--sonic-blue);
-            text-shadow: 4px 4px 0px #000, 0 0 15px var(--electric-blue);
-            
-            /* Inclinación para dar sensación de movimiento */
-            transform: skew(-5deg);
             line-height: 1;
             letter-spacing: -1px;
+            
+            /* Relleno Amarillo Limpio */
+            color: var(--sonic-yellow);
+            
+            /* Borde Azul Grueso */
+            -webkit-text-stroke: 4px var(--sonic-blue);
+            
+            /* LA SOLUCIÓN MÁGICA: Pinta el borde primero, luego el relleno encima */
+            paint-order: stroke fill;
+            
+            /* Sombra 3D y Resplandor */
+            text-shadow: 
+                5px 5px 0px #000, /* Sombra negra dura para profundidad */
+                0 0 20px var(--electric-blue); /* Resplandor azul */
+            
+            /* Inclinación de velocidad */
+            transform: skew(-5deg);
         }
 
         /* --- CAJAS DE INFORMACIÓN --- */
@@ -90,7 +98,7 @@
 
         .label {
             color: var(--electric-blue);
-            font-weight: 900; /* Usamos Montserrat Black también aquí */
+            font-weight: 900;
             font-style: italic;
             display: block;
             text-transform: uppercase;
@@ -139,7 +147,7 @@
 
         /* --- RESPONSIVE --- */
         @media (max-width: 400px) {
-            h1 { font-size: 2.1rem; }
+            h1 { font-size: 2.2rem; -webkit-text-stroke: 3px var(--sonic-blue); }
             .text { font-size: 1rem; }
         }
     </style>
@@ -147,7 +155,7 @@
 <body>
 
 <div class="card">
-    <img src="https://static.wixstatic.com/media/f9cddd_7193ccf606624c9a97863d49e9a92025~mv2.png">
+    <img src="https://static.wixstatic.com/media/f9cddd_7193ccf606624c9a97863d49e9a92025~mv2.png" alt="Sonic Invitation" class="header-img">
 
     <div class="content">
         <h1>CUMPLEAÑOS<br>MAXI</h1>
@@ -167,7 +175,7 @@
 
         <div class="embed-container">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1902.6666014457782!2d-66.2163150!3d-17.3717140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3713600f60741%3A0xe54d246698188151!2sSalon%20De%20Eventos%20Alcala!5e0!3m2!1ses!2sbo!4v1705680000000!5m2!1ses!2sbo" 
+                src="http://googleusercontent.com/maps.google.com/8" 
                 height="300" 
                 allowfullscreen="" 
                 loading="lazy">
@@ -179,7 +187,7 @@
 
         <div class="embed-container">
             <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLScM_s8dUYcqam30V7KM15V2nbsOY7wsZzM-AWphYtO6NK2YZA/viewform?embedded=true" 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScM_s8dUYcqam30V7KM15L2nbsOY7wsZzM-AWphYtO6NK2YZA/viewform?embedded=true" 
                 height="700" 
                 frameborder="0" 
                 marginheight="0" 
@@ -194,5 +202,4 @@
 </div>
 
 </body>
-
 </html>
