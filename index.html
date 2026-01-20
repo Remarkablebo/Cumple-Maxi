@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cumpleaños de Maxi - Sonic</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+
     <style>
         /* --- PALETA DE COLORES --- */
         :root {
-            --sonic-blue: #0056b3;     /* Azul oscuro base */
-            --electric-blue: #00d2ff;  /* Azul eléctrico brillante */
-            --sonic-yellow: #ffd700;   /* Amarillo dorado */
-            --dark-bg: #0a0a0a;        /* Fondo casi negro */
+            --sonic-blue: #0056b3;
+            --electric-blue: #00d2ff;
+            --sonic-yellow: #ffd700;
+            --dark-bg: #050505;
         }
 
         /* --- ESTILOS GENERALES --- */
         body {
-            /* Usamos Arial Black como prioridad para que se vea muy grueso */
-            font-family: 'Arial Black', 'Arial Bold', Impact, sans-serif;
+            /* Aplicamos Montserrat como fuente base */
+            font-family: 'Montserrat', sans-serif;
             background-color: var(--dark-bg);
-            /* Un fondo de patrón sutil para más textura */
             background-image: radial-gradient(circle at center, #111 0%, #000 100%);
             color: #fff;
             margin: 0;
@@ -28,24 +32,21 @@
             min-height: 100vh;
         }
 
-        /* --- TARJETA PRINCIPAL CON EFECTO ELÉCTRICO --- */
+        /* --- TARJETA PRINCIPAL --- */
         .card {
             width: 100%;
             max-width: 500px;
             background: linear-gradient(180deg, #001529 0%, #000 100%);
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
             text-align: center;
-            /* EFECTO DE BORDE ELÉCTRICO */
             border: 3px solid var(--sonic-blue);
             box-shadow: 
-                0 0 15px var(--sonic-blue),    /* Brillo interior */
-                0 0 30px var(--electric-blue), /* Halo eléctrico externo */
-                0 0 50px var(--sonic-blue),    /* Resplandor difuso */
-                inset 0 0 20px rgba(0, 210, 255, 0.3); /* Brillo interno en los bordes */
+                0 0 15px var(--sonic-blue),
+                0 0 30px var(--electric-blue),
+                0 0 50px var(--sonic-blue);
         }
 
-        /* --- IMAGEN DE CABECERA --- */
         .header-img {
             width: 100%;
             height: auto;
@@ -57,62 +58,51 @@
             padding: 30px 20px;
         }
 
-        /* --- TIPOGRAFÍA ESTILO SONIC --- */
+        /* --- TÍTULO MONTSERRAT BLACK ITALIC --- */
         h1 {
-            /* Estilo de logo metálico y rápido */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;   /* Black */
+            font-style: italic; /* Italic */
             font-size: 2.8rem;
-            font-weight: 900;   /* Black/Ultra Bold */
-            font-style: italic; /* Inclinado */
             margin: 0 0 25px 0;
             text-transform: uppercase;
-            
-            /* Relleno amarillo */
             color: var(--sonic-yellow);
             
-            /* Borde azul a las letras (Webkit) */
+            /* Efecto Eléctrico en el texto */
             -webkit-text-stroke: 2px var(--sonic-blue);
-            /* Sombra dura para efecto 3D */
             text-shadow: 4px 4px 0px #000, 0 0 15px var(--electric-blue);
             
-            /* Pequeña inclinación extra para velocidad */
+            /* Inclinación para dar sensación de movimiento */
             transform: skew(-5deg);
-            letter-spacing: 1px;
             line-height: 1;
+            letter-spacing: -1px;
         }
 
         /* --- CAJAS DE INFORMACIÓN --- */
         .info-item {
-            background: rgba(0, 86, 179, 0.15); /* Fondo azulado transparente */
+            background: rgba(0, 86, 179, 0.15);
             margin-bottom: 18px;
             padding: 15px;
-            border-radius: 12px;
+            border-radius: 15px;
             border: 2px solid var(--sonic-blue);
-            box-shadow: inset 0 0 10px rgba(0, 210, 255, 0.1);
-            text-align: left; /* Texto alineado a la izquierda para mejor lectura */
+            text-align: left;
         }
 
         .label {
-            /* Estilo Bold Italic para etiquetas */
             color: var(--electric-blue);
-            font-weight: 800;
+            font-weight: 900; /* Usamos Montserrat Black también aquí */
             font-style: italic;
             display: block;
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin-bottom: 5px;
-            text-shadow: 0 0 5px var(--sonic-blue);
         }
 
         .text {
-            font-family: 'Segoe UI', Roboto, sans-serif; /* Fuente más legible para los datos */
-            font-weight: bold;
+            font-weight: 700;
             font-size: 1.15rem;
             line-height: 1.4;
             color: #fff;
-        }
-
-        .highlight-yellow {
-            color: var(--sonic-yellow);
         }
 
         /* --- MAPAS Y FORMULARIOS --- */
@@ -121,16 +111,14 @@
             overflow: hidden;
             margin-top: 25px;
             border: 3px solid var(--sonic-blue);
-            box-shadow: 0 0 15px rgba(0, 86, 179, 0.5);
         }
 
         h2 {
-            font-weight: 800;
+            font-weight: 900;
             font-style: italic;
             color: var(--sonic-yellow);
             font-size: 1.5rem;
             margin-top: 35px;
-            margin-bottom: 5px;
             text-transform: uppercase;
             text-shadow: 2px 2px 0 #000;
         }
@@ -139,22 +127,19 @@
             width: 100%;
             border: 0;
             display: block;
-            background: #000; /* Fondo negro mientras carga */
         }
 
         .footer {
             padding: 20px;
-            font-weight: bold;
+            font-weight: 900;
             font-style: italic;
             font-size: 1rem;
             color: var(--electric-blue);
-            background: rgba(0,0,0,0.5);
-            letter-spacing: 1px;
         }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 400px) {
-            h1 { font-size: 2.2rem; -webkit-text-stroke: 1.5px var(--sonic-blue); }
+            h1 { font-size: 2.1rem; }
             .text { font-size: 1rem; }
         }
     </style>
@@ -165,18 +150,15 @@
     <img src="https://static.wixstatic.com/media/f9cddd_fc1ae108cfa24a79a7d805f1db45ff70~mv2.png" alt="Sonic Invitation" class="header-img">
 
     <div class="content">
-        <h1>Cumpleaños<br>Maxi</h1>
+        <h1>CUMPLEAÑOS<br>MAXI</h1>
 
         <div class="info-item">
-            <span class="label">⚡ ¿Cuándo?</span>
-            <div class="text">
-                Domingo 8 de Febrero<br>
-                <span class="highlight-yellow">14:30 PM</span>
-            </div>
+            <span class="label">⚡ ¿CUÁNDO?</span>
+            <div class="text">Domingo 8 de Febrero — 14:30 PM</div>
         </div>
 
         <div class="info-item">
-            <span class="label">📍 ¿Dónde?</span>
+            <span class="label">📍 ¿DÓNDE?</span>
             <div class="text">
                 <strong>Salón de eventos Alcalá</strong><br>
                 Cidar Humerez entre Rafael Méndez y Alberta Acha
@@ -185,20 +167,19 @@
 
         <div class="embed-container">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.662785502978!2d-66.1756719254915!3d-17.38005506401904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e375c603026185%3A0x591869c9c1895d63!2sSal%C3%B3n%20de%20eventos%20Alcal%C3%A1!5e0!3m2!1ses-419!2sbo!4v1708463000000!5m2!1ses-419!2sbo" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1902.6666014457782!2d-66.2163150!3d-17.3717140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3713600f60741%3A0xe54d246698188151!2sSalon%20De%20Eventos%20Alcala!5e0!3m2!1ses!2sbo!4v1705680000000!5m2!1ses!2sbo" 
                 height="300" 
                 allowfullscreen="" 
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                loading="lazy">
             </iframe>
         </div>
 
         <h2>🚀 ¿Vienes a la carrera?</h2>
-        <p style="color: #ccc; font-size: 0.9rem; font-style: italic; margin-top:0;">Confirma tu asistencia aquí abajo:</p>
+        <p style="color: #ccc; font-size: 0.9rem; font-style: italic;">Confirma tu asistencia aquí abajo:</p>
 
         <div class="embed-container">
             <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLScM_s8dUYcqam30V7KM15L2nbsOY7wsZzM-AWphYtO6NK2YZA/viewform?embedded=true" 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScM_s8dUYcqam30V7KM15V2nbsOY7wsZzM-AWphYtO6NK2YZA/viewform?embedded=true" 
                 height="700" 
                 frameborder="0" 
                 marginheight="0" 
@@ -208,7 +189,7 @@
     </div>
 
     <div class="footer">
-        ¡Prepárate para la velocidad! 💨🦔
+        ¡PREPÁRATE PARA LA VELOCIDAD! 💨🦔
     </div>
 </div>
 
