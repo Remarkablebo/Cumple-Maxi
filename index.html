@@ -31,7 +31,7 @@
             min-height: 100vh;
         }
 
-        /* --- TARJETA PRINCIPAL --- */
+        /* --- TARJETA PRINCIPAL CON EFECTO ELÉCTRICO --- */
         .card {
             width: 100%;
             max-width: 500px;
@@ -57,12 +57,12 @@
             padding: 30px 20px;
         }
 
-        /* --- TÍTULO PRINCIPAL CORREGIDO --- */
+        /* --- TÍTULO MONTSERRAT BLACK ITALIC CORREGIDO --- */
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
             font-style: italic;
-            font-size: 3rem; /* Un poco más grande para impacto */
+            font-size: 3rem;
             margin: 0 0 25px 0;
             text-transform: uppercase;
             line-height: 1;
@@ -74,13 +74,13 @@
             /* Borde Azul Grueso */
             -webkit-text-stroke: 4px var(--sonic-blue);
             
-            /* LA SOLUCIÓN MÁGICA: Pinta el borde primero, luego el relleno encima */
+            /* Pinta el borde primero, luego el relleno encima */
             paint-order: stroke fill;
             
             /* Sombra 3D y Resplandor */
             text-shadow: 
-                5px 5px 0px #000, /* Sombra negra dura para profundidad */
-                0 0 20px var(--electric-blue); /* Resplandor azul */
+                5px 5px 0px #000,
+                0 0 20px var(--electric-blue);
             
             /* Inclinación de velocidad */
             transform: skew(-5deg);
@@ -175,10 +175,12 @@
 
         <div class="embed-container">
             <iframe 
-                src="<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3807.628280738576!2d-66.19300462483518!3d-17.381610883504603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDIyJzUzLjgiUyA2NsKwMTEnMjUuNiJX!5e0!3m2!1ses!2sbo!4v1768934707354!5m2!1ses!2sbo" 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3807.628280738576!2d-66.19300462483518!3d-17.381610883504603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDIyJzUzLjgiUyA2NsKwMTEnMjUuNiJX!5e0!3m2!1ses!2sbo!4v1768934707354!5m2!1ses!2sbo" 
                 height="300" 
+                style="border:0;" 
                 allowfullscreen="" 
-                loading="lazy">
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
 
@@ -203,4 +205,3 @@
 
 </body>
 </html>
-
